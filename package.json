@@ -6,11 +6,13 @@
   "scripts": {
     "test": "node_modules/.bin/jest",
     "coverage": "node_modules/.bin/jest --coverage",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "codecov": "node_modules/.bin/codecov"
   },
   "author": "matteo@magni.me",
   "license": "MIT",
   "dependencies": {
+    "codecov": "^2.3.1",
     "node-telegram-bot-api": "^0.28.0",
     "util": "^0.10.3"
   },
