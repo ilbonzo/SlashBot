@@ -1,0 +1,8 @@
+{
+    "production": {
+        "telegramToken": "xxxx"
+    },
+    "development": {
+        "telegramToken": "xxxx"
+    }
+}

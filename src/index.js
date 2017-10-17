@@ -1,24 +1,10 @@
-const telegramBot = require('node-telegram-bot-api');
-const util = require('util');
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').load();
+}
 
-const config = require ('../config.json');
-const slashTalk = require ('./modules/slashTalk');
+var config = require ('../config.json');
+const telegram = require ('./telegram');
 
-const bot = new telegramBot(config.telegramToken, {polling: true});
+config = config[process.env.NODE_ENV];
 
-bot.on('message', (message) => {
-    bot.sendMessage(message.chat.id, slashTalk.genericResponse());
-});
-
-bot.onText(/\/start/, (message) => {
-    bot.sendMessage(message.chat.id, 'slash', {
-    'reply_markup': {
-        'keyboard': [['/slash']]
-        }
-    });
-});
-
-bot.onText(/\/slash/, (message) => {
-    bot.sendMessage(message.chat.id, slashTalk.genericResponse());
-});
-
+telegram.init(config);
