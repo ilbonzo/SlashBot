@@ -5,7 +5,11 @@ module.exports = {
     start: function (bot) {
 
         bot.on('message', (message) => {
-            bot.sendMessage(message.chat.id, slashTalk.genericResponse());
+            if (typeof message.entities !== 'undefined') {
+                if (message.entities[0].type === 'mention') {
+                    bot.sendMessage(message.chat.id, slashTalk.genericResponse());
+                }
+            }
         });
 
         bot.onText(/\/start/, (message) => {
@@ -21,7 +25,7 @@ module.exports = {
         });
 
     }
-    
+
 }
 
 
