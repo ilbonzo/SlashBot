@@ -6,7 +6,7 @@ SlashBot
 [![codecov](https://codecov.io/gh/ilbonzo/SlashBot/branch/master/graph/badge.svg)](https://codecov.io/gh/ilbonzo/SlashBot)
 [![Dependencies Status](https://david-dm.org/ilbonzo/SlashBot.svg)](https://david-dm.org/ilbonzo/SlashBot)
 
-v0.0.1
+v0.0.2
 
 SlashBot: personal dog bot
 
