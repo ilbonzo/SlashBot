@@ -10,6 +10,7 @@ module.exports = {
         const bot = new telegramBot(config.telegramToken, { polling: true });
 
         indexController.start(bot);
+        indexController.scheduled(bot, config);
 
     }
 

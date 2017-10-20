@@ -1,4 +1,5 @@
 
+const schedule = require('node-schedule');
 const slashTalk = require ('../../modules/slashTalk');
 module.exports = {
 
@@ -24,6 +25,12 @@ module.exports = {
             bot.sendMessage(message.chat.id, slashTalk.genericResponse());
         });
 
+    },
+
+    scheduled: function (bot, config) {
+        const j = schedule.scheduleJob('30 7,19 * * *', function () {
+            bot.sendMessage(config.groupId, slashTalk.hungryMessage());
+        });
     }
 
 }

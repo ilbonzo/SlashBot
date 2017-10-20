@@ -5,4 +5,9 @@ module.exports = {
         return response
     },
 
+    hungryMessage: function () {
+        let message = 'I\'m hungry';
+        return message;
+    }
+
 }

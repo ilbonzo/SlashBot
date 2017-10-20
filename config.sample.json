@@ -1,8 +1,10 @@
 {
     "production": {
-        "telegramToken": "xxxx"
+        "telegramToken": "xxxx",
+        "groupId": "xxxx"
     },
     "development": {
-        "telegramToken": "xxxx"
+        "telegramToken": "xxxx",
+        "groupId": "xxxx"
     }
 }

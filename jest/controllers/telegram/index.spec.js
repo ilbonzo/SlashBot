@@ -1,6 +1,8 @@
+const lolex = require('lolex');
 const telegramController = require('../../../src/controllers/telegram/indexController.js');
 
-test('get response of generic message in telegram', () => {
+describe('start tests', () => {
+    test('get response of generic message in telegram', () => {
     const telegramBot = require('node-telegram-bot-api');
 
     const botMock = new telegramBot('xxxxxx', { polling: false });
@@ -17,9 +19,9 @@ test('get response of generic message in telegram', () => {
                 },
                 'entities': [{'type': 'mention'}]
             });
-});
+    });
 
-test('get not send response of generic message in telegram', () => {
+    test('get not send response of generic message in telegram', () => {
     const telegramBot = require('node-telegram-bot-api');
 
     const botMock = new telegramBot('xxxxxx', { polling: false });
@@ -32,10 +34,10 @@ test('get not send response of generic message in telegram', () => {
                     'id': 10
                 }
             });
-});
+    });
 
 
-test('get response of command /start in telegram', () => {
+    test('get response of command /start in telegram', () => {
     const telegramBot = require('node-telegram-bot-api');
 
     const botMock = new telegramBot('xxxxxx', { polling: false });
@@ -61,9 +63,9 @@ test('get response of command /start in telegram', () => {
 
     botMock.emit('message', message);
     botMock.processUpdate({ 'message': message });
-});
+    });
 
-test('get response of command /slash in telegram', () => {
+    test('get response of command /slash in telegram', () => {
     const telegramBot = require('node-telegram-bot-api');
 
     const botMock = new telegramBot('xxxxxx', { polling: false });
@@ -84,4 +86,35 @@ test('get response of command /slash in telegram', () => {
     };
     botMock.emit('message', message);
     botMock.processUpdate({ 'message': message });
+    });
+
+});
+
+describe('tests scheduled', () => {
+    beforeEach(() => {
+        clock = lolex.install();
+    });
+
+    afterEach(() => {
+        clock = clock.uninstall();
+    });
+
+    test('get feed the dog message', () => {
+        const telegramBot = require('node-telegram-bot-api');
+        const config = {
+            "groupId": "xxxxx"
+        };
+        const timeout = 12 * 60 * 60 * 1000 + 150;
+
+        const botMock = new telegramBot('xxxxxx', { polling: false });
+
+        botMock.sendMessage = function (chatId, message) {
+            expect(message).toEqual('I\'m hungry');
+        }
+
+        telegramController.scheduled(botMock, config.groupId);
+
+        clock.tick(timeout);
+    });
+
 });
