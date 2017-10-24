@@ -27,9 +27,15 @@ module.exports = {
 
     },
 
-    scheduled: function (bot, config) {
-        const j = schedule.scheduleJob('30 7,19 * * *', function () {
+    scheduledHungry: function (bot, config) {
+        schedule.scheduleJob('30 7,19 * * *', function () {
             bot.sendMessage(config.groupId, slashTalk.hungryMessage());
+        });
+    },
+
+    scheduledThirsty: function (bot, config) {
+        schedule.scheduleJob('30 15 * * *', function () {
+            bot.sendMessage(config.groupId, slashTalk.thirstyMessage());
         });
     }
 
