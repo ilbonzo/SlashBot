@@ -1,13 +1,15 @@
 module.exports = {
 
     genericResponse: function () {
-        let response = 'Bau Bau';
-        return response
+        return 'Bau Bau';
     },
 
     hungryMessage: function () {
-        let message = 'I\'m hungry';
-        return message;
+        return 'I\'m hungry';
+    },
+
+    thirstyMessage: function () {
+        return 'I\'m thirsty';
     }
 
 }

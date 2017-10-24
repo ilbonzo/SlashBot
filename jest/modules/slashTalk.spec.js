@@ -7,3 +7,7 @@ test('get generic response', () => {
 test('get hungry message', () => {
     expect(slashTalk.hungryMessage()).toEqual('I\'m hungry');
 });
+
+test('get thirsty message', () => {
+    expect(slashTalk.thirstyMessage()).toEqual('I\'m thirsty');
+});

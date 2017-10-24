@@ -112,7 +112,25 @@ describe('tests scheduled', () => {
             expect(message).toEqual('I\'m hungry');
         }
 
-        telegramController.scheduled(botMock, config.groupId);
+        telegramController.scheduledHungry(botMock, config.groupId);
+
+        clock.tick(timeout);
+    });
+
+    test('get quench thirst the dog message', () => {
+        const telegramBot = require('node-telegram-bot-api');
+        const config = {
+            "groupId": "xxxxx"
+        };
+        const timeout = 24 * 60 * 60 * 1000 + 150;
+
+        const botMock = new telegramBot('xxxxxx', { polling: false });
+
+        botMock.sendMessage = function (chatId, message) {
+            expect(message).toEqual('I\'m thirsty');
+        }
+
+        telegramController.scheduledThirsty(botMock, config.groupId);
 
         clock.tick(timeout);
     });
