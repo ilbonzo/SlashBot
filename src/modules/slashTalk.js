@@ -10,6 +10,10 @@ module.exports = {
 
     thirstyMessage: function () {
         return 'I\'m thirsty';
+    },
+
+    thanksMessage: function () {
+        return 'thanks';
     }
 
 }
