@@ -45,6 +45,7 @@ module.exports = {
         dash.on('detected', function (){
             bot.sendMessage(config.groupId, slashTalk.thanksMessage());
         });
+        return dash;
     }
 
 }

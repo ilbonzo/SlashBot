@@ -1,10 +1,12 @@
 {
     "production": {
         "telegramToken": "xxxx",
-        "groupId": "xxxx"
+        "groupId": "xxxx",
+        "dashButtonMAC": "xx:xx:xx:xx:xx:xx"
     },
     "development": {
         "telegramToken": "xxxx",
-        "groupId": "xxxx"
+        "groupId": "xxxx",
+        "dashButtonMAC": "xx:xx:xx:xx:xx:xx"
     }
 }

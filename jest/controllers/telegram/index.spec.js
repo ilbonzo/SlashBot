@@ -135,4 +135,22 @@ describe('tests scheduled', () => {
         clock.tick(timeout);
     });
 
+    test('get thanks message after dash button click', () => {
+        jest.mock('node-dash-button');
+        const telegramBot = require('node-telegram-bot-api');
+        const dashButton = require('node-dash-button');
+        const config = {
+            "groupId": "xxxxx"
+        };
+        const botMock = new telegramBot('xxxxxx', { polling: false });
+
+        botMock.sendMessage = function (chatId, message) {
+            expect(message).toEqual('thanks');
+        }
+
+        let dash = telegramController.listenDashButton(botMock, config.groupId);
+
+        dash.emit('detected');
+    });
+
 });
