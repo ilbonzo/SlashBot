@@ -41,7 +41,7 @@ module.exports = {
     },
 
     listenDashButton: function (bot, config) {
-        var dash = dash_button(config.dashButtonMAC, null, null, 'all');
+        var dash = dashButton(config.dashButtonMAC, null, null, 'all');
         dash.on('detected', function (){
             bot.sendMessage(config.groupId, slashTalk.thanksMessage());
         });
