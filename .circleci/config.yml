@@ -1,13 +1,15 @@
 version: 2
+
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install libpcap-dev
+
 jobs:
   build:
     docker:
       - image: circleci/node:8
 
     working_directory: ~/repo
-    dependencies:
-      pre:
-        - sudo apt-get update; sudo apt-get install libpcap-dev
     steps:
       - checkout
 
