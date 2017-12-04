@@ -5,6 +5,8 @@ jobs:
       - image: circleci/node:8
 
     working_directory: ~/repo
+    pre:
+      - sudo apt-get update; sudo apt-get install libpcap-dev
     steps:
       - checkout
 
