@@ -4,6 +4,8 @@ node_js:
   - "7"
   - "6"
 script: 'npm run coverage'
-after_success: 
+before_install:
+  - sudo apt-get install libpcap-dev
+after_success:
   - 'npm run coveralls'
   - 'npm run codecov'
