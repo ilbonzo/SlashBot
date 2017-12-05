@@ -1,5 +1,6 @@
 
 const schedule = require('node-schedule');
+const dashButton = require('node-dash-button');
 const slashTalk = require ('../../modules/slashTalk');
 module.exports = {
 
@@ -37,6 +38,14 @@ module.exports = {
         schedule.scheduleJob('30 15 * * *', function () {
             bot.sendMessage(config.groupId, slashTalk.thirstyMessage());
         });
+    },
+
+    listenDashButton: function (bot, config) {
+        var dash = dashButton(config.dashButtonMAC, null, null, 'all');
+        dash.on('detected', function (){
+            bot.sendMessage(config.groupId, slashTalk.thanksMessage());
+        });
+        return dash;
     }
 
 }

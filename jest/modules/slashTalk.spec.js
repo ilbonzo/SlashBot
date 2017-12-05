@@ -11,3 +11,7 @@ test('get hungry message', () => {
 test('get thirsty message', () => {
     expect(slashTalk.thirstyMessage()).toEqual('I\'m thirsty');
 });
+
+test('get thanks message', () => {
+    expect(slashTalk.thanksMessage()).toEqual('thanks');
+});

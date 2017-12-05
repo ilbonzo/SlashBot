@@ -12,6 +12,7 @@ module.exports = {
         indexController.start(bot);
         indexController.scheduledHungry(bot, config);
         indexController.scheduledThirsty(bot, config);
+        indexController.listenDashButton(bot, config);
 
     }
 
