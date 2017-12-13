@@ -10,6 +10,12 @@ v0.0.2
 
 SlashBot: personal dog bot
 
+## Feature
+
+ * remind you when it must eat or drink
+ * after feeding the dog you can push a dash button and alert the whole family that the dog has eaten. The dog will send a message of thanks
+ 
+![Slash](https://github.com/ilbonzo/SlashBot/raw/master/public/images/screen.png "Slash")
 ---
 Fork me on [github](https://github.com/ilbonzo/SlashBot)
 
