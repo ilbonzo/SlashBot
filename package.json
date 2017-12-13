@@ -1,6 +1,6 @@
 {
   "name": "slash-bot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SlashBot personal dog bot",
   "main": "src/index.js",
   "scripts": {
@@ -12,11 +12,11 @@
   "author": "matteo@magni.me",
   "license": "MIT",
   "dependencies": {
-    "codecov": "^2.3.1",
+    "codecov": "^3.0.0",
     "dotenv": "^4.0.0",
     "node-dash-button": "^0.6.1",
     "node-schedule": "^1.2.5",
-    "node-telegram-bot-api": "^0.28.0",
+    "node-telegram-bot-api": "^0.29.0",
     "util": "^0.10.3"
   },
   "devDependencies": {
