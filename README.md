@@ -5,8 +5,9 @@ SlashBot
 [![Coverage Status](https://coveralls.io/repos/github/ilbonzo/SlashBot/badge.svg?branch=master)](https://coveralls.io/github/ilbonzo/SlashBot?branch=master)
 [![codecov](https://codecov.io/gh/ilbonzo/SlashBot/branch/master/graph/badge.svg)](https://codecov.io/gh/ilbonzo/SlashBot)
 [![Dependencies Status](https://david-dm.org/ilbonzo/SlashBot.svg)](https://david-dm.org/ilbonzo/SlashBot)
+[![Dev Dependency Status][https://david-dm.org/ilbonzo/SlashBot/dev-status.svg]][https://david-dm.org/ilbonzo/SlashBot?type=dev]
 
-v0.0.2
+v0.0.3
 
 SlashBot: personal dog bot
 
