@@ -6,8 +6,9 @@ SlashBot
 [![codecov](https://codecov.io/gh/ilbonzo/SlashBot/branch/master/graph/badge.svg)](https://codecov.io/gh/ilbonzo/SlashBot)
 [![Dependencies Status](https://david-dm.org/ilbonzo/SlashBot.svg)](https://david-dm.org/ilbonzo/SlashBot)
 [![Dev Dependency Status](https://david-dm.org/ilbonzo/SlashBot/dev-status.svg)](https://david-dm.org/ilbonzo/SlashBot?type=dev)
+[![BCH compliance](https://bettercodehub.com/edge/badge/ilbonzo/SlashBot?branch=master)](https://bettercodehub.com/)
 
-v0.0.3
+v0.0.4
 
 SlashBot: personal dog bot
 
