@@ -8,7 +8,7 @@ SlashBot
 [![Dev Dependency Status](https://david-dm.org/ilbonzo/SlashBot/dev-status.svg)](https://david-dm.org/ilbonzo/SlashBot?type=dev)
 [![BCH compliance](https://bettercodehub.com/edge/badge/ilbonzo/SlashBot?branch=master)](https://bettercodehub.com/)
 
-v0.0.4
+v0.0.5
 
 SlashBot: personal dog bot
 
